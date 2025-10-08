@@ -21,8 +21,115 @@
       </ul>
     </nav>
 
+    <main class="contact-page-content">
+      <header class="contact-header">
+        <h1>Get in Touch</h1>
+        <p class="contact-intro">
+          Have a question, a project idea, or just want to connect? Fill out the
+          form below, and I'll get back to you as soon as possible.
+        </p>
+      </header>
+
+      <section class="contact-form-container">
+        <form
+          action="YOUR_SERVER_SIDE_SCRIPT_OR_FORM_SERVICE_ENDPOINT"
+          method="POST"
+          class="contact-form"
+        >
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="john.doe@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Reason for Contact</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>
+                -- Please choose an option --
+              </option>
+              <option value="collaboration">Collaboration</option>
+              <option value="freelance">Freelance / Contract Work</option>
+              <option value="professional-inquiry">Professional Inquiry</option>
+              <option value="general">General Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Project Inquiry"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="8"
+              required
+              placeholder="Tell me more about your project or question..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </section>
+
+      <section class="other-contact-methods">
+        <h2>Other Ways to Connect</h2>
+        <p>You can also reach me directly:</p>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:hustonevan@gmail.com">hustonevan@gmail.com</a>
+          </li>
+          <li>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/evan-huston-a69a602a7/"
+              target="_blank"
+              >linkedin.com/in/evan-huston</a
+            >
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/ehusto" target="_blank"
+              >github.com/ehusto</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
     <footer>
       <p>&copy; 2025 Evan Huston. All rights reserved.</p>
+      <p>
+        This portfolio site is for showcasing my work and is not affiliated with
+        my current employer.
+      </p>
     </footer>
   </body>
 </html>

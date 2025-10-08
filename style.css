@@ -1,4 +1,3 @@
-/* ---------- THEME VARIABLES ---------- */
 :root {
   --text: #2e2e2e;
   --background: #e9e7e2;
@@ -7,7 +6,6 @@
   --accent: #00b8a9;
 }
 
-/* ---------- BASE ---------- */
 body {
   background: var(--background);
   color: var(--text);
@@ -22,7 +20,6 @@ footer {
   font-style: italic;
 }
 
-/* ---------- NAV ---------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -125,8 +122,9 @@ nav a:hover {
 }
 
 .inspiration iframe {
-  width: 700px;
-  height: 394px;
+  width: 100%;
+  max-width: 700px;
+  height: 370px;
   box-shadow: 2px 2px 6px var(--primary);
 }
 
@@ -138,9 +136,11 @@ nav a:hover {
 }
 
 .inspiration table {
-  width: 700px;
-  height: 394px;
+  width: 100%;
+  max-width: 700px;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inspiration th,
@@ -181,26 +181,380 @@ nav a:hover {
 .about-images img {
   max-width: 400px;
   width: 100%;
+  max-height: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- RESUME ---------- */
-#resume {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  border-radius: 10px;
-  align-items: center;
-  text-align: center;
-  padding-top: 50px;
+/* ---------- Project ---------- */
+.projects-page {
+  h1 {
+    text-align: center;
+  }
 }
 
-.resume-img {
-  width: 300px;
-  margin-left: 100px;
+/* ---------- RESUME ---------- */
+.resume-page-content {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 1.5em 2em;
+  background: var(--background);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--primary);
+}
+
+.resume-header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 0.1em;
+}
+
+.resume-header .tagline {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.resume-header .contact-info {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.resume-header .contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.resume-header .contact-info a:hover {
+  text-decoration: underline;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.8em 1.5em;
+  background-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+  background-color: darken(var(--accent), 10%);
+  background-color: #00a095;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.download-button:active {
+  background-color: darken(var(--accent), 20%);
+  background-color: #00897f;
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.resume-sections-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3em;
+}
+
+.resume-section {
+  margin-bottom: 2.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #eee;
+}
+
+.resume-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.resume-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--secondary);
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+.summary p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.experience-item,
+.education-item {
+  margin-bottom: 2em;
+}
+
+.exp-header,
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+.exp-logo,
+.edu-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3,
+.education-item h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.company,
+.degree {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0.2em 0;
+}
+
+.duration {
+  font-style: italic;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  margin-top: -0.3em;
+  margin-left: 70px;
+  margin-bottom: 1em;
+}
+
+.achievements,
+.edu-details {
+  list-style: disc;
+  padding-left: 25px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.achievements li,
+.edu-details li {
+  margin-bottom: 0.5em;
+}
+
+.skills-category {
+  margin-bottom: 1.5em;
+}
+
+.skills-category h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5em;
+}
+
+.skills-category p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.2em;
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+}
+.certifications li {
+  background-color: #f0f0f0;
+  padding: 0.8em 1em;
+  margin-bottom: 0.8em;
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.projects-link p {
+  font-size: 1rem;
+  text-align: center;
+}
+.projects-link a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+.projects-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Contact ---------- */
+.contact-page-content {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  background: var(--background);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-header {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--primary);
+}
+
+.contact-header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 0.2em;
+}
+
+.contact-intro {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  max-width: 700px;
+  margin: 0.5em auto 0;
+}
+
+.contact-form-container {
+  background: #fff;
+  padding: 2.5em;
   border-radius: 8px;
-  box-shadow: 2px 2px 6px var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5em;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 184, 169, 0.2);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  display: block;
+  width: auto;
+  min-width: 180px;
+  padding: 1em 2.5em;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 184, 169, 0.3);
+  margin: 1.5em auto 0;
+}
+
+.submit-button:hover {
+  background-color: #00a095;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 184, 169, 0.4);
+}
+
+.submit-button:active {
+  background-color: #00897f;
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 184, 169, 0.2);
+}
+
+.other-contact-methods {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.other-contact-methods h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--secondary);
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+.other-contact-methods p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 1em;
+}
+
+.other-contact-methods ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.other-contact-methods li {
+  margin-bottom: 0.8em;
+  color: var(--text);
+}
+
+.other-contact-methods a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.other-contact-methods a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- LOGOS ---------- */
@@ -228,8 +582,17 @@ nav a:hover {
   }
   .grid-container {
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+    gap: 2.5em;
   }
 
+  .grid-container .grid-item:nth-child(3) {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .resume-row {
     flex-direction: column;
     text-align: center;
@@ -250,11 +613,50 @@ nav a:hover {
     text-align: center;
   }
 
+  .inspiration iframe,
+  .inspiration table {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .inspiration th,
+  .inspiration td {
+    word-break: break-word;
+  }
+
+  .inspiration td .logo-link {
+    max-width: 80px;
+  }
+
   #resume {
     padding: 2em 1em;
   }
   .resume-img {
     width: 50%;
     margin: 0 auto 1em;
+  }
+
+  .contact-page-content {
+    margin: 1em;
+    padding: 1.5em;
+  }
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+  .contact-intro {
+    font-size: 1rem;
+  }
+  .contact-form-container {
+    padding: 1.5em;
+  }
+  .submit-button {
+    min-width: unset;
+    width: 100%;
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+  }
+  .other-contact-methods h2 {
+    font-size: 1.5rem;
   }
 }
