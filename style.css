@@ -187,10 +187,8 @@ nav a:hover {
 }
 
 /* ---------- Project ---------- */
-.projects-page {
-  h1 {
-    text-align: center;
-  }
+.projects-page h1 {
+  text-align: center;
 }
 
 /* ---------- RESUME ---------- */
@@ -255,14 +253,12 @@ nav a:hover {
 }
 
 .download-button:hover {
-  background-color: darken(var(--accent), 10%);
   background-color: #00a095;
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .download-button:active {
-  background-color: darken(var(--accent), 20%);
   background-color: #00897f;
   transform: translateY(0);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
