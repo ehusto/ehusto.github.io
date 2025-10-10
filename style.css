@@ -95,7 +95,8 @@ nav a:active {
 }
 
 .hero-img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   border-radius: 8px;
   box-shadow: 4px 4px 8px var(--primary);
 }
@@ -217,7 +218,7 @@ nav a:active {
 }
 
 .resume-header h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 3rem;
   color: var(--accent);
   margin: 0 0 0.25em 0;
@@ -226,7 +227,7 @@ nav a:active {
 }
 
 .resume-header .tagline {
-  font-family: "Roboto", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.15rem;
   color: var(--secondary);
   margin: 0;
@@ -256,7 +257,7 @@ nav a:active {
   color: #111;
   text-decoration: none;
   border-radius: 6px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -278,7 +279,7 @@ nav a:active {
 }
 
 .resume-section h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 1.6rem;
   color: var(--text);
   margin-bottom: 0.65em;
@@ -305,7 +306,7 @@ nav a:active {
 
 .experience-item h3,
 .education-item h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 1.15rem;
   color: var(--accent);
   margin: 0;
@@ -390,14 +391,14 @@ nav a:active {
 }
 
 .contact-header h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 2.8rem;
   color: var(--primary);
   margin-bottom: 0.2em;
 }
 
 .contact-intro {
-  font-family: "Roboto", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   color: var(--text);
   max-width: 700px;
@@ -461,7 +462,7 @@ nav a:active {
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   cursor: pointer;
@@ -489,7 +490,7 @@ nav a:active {
 }
 
 .other-contact-methods h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 1em;
